@@ -1,0 +1,11 @@
+{
+  "name": "appweb-grupo2-e4-ciclo3-misiontic-utp-dev",
+  "version": "1.0.0",
+  "description": "Repositorio de trabajo del Equipo 4 del Grupo 02",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
