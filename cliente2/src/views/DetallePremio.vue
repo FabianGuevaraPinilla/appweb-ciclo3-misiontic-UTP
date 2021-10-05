@@ -46,12 +46,12 @@
                     </div>
 
                     <div class="start">
-                        <span style="font-size: 1em; color: #888888">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                        <span style="font-size: 1.5em; color: #888888">
+                        <span class="mdi mdi-star"></span>
+                        <span class="mdi mdi-star"></span>
+                        <span class="mdi mdi-star"></span>
+                        <span class="mdi mdi-star"></span>
+                        <span class="mdi mdi-star"></span>
                         </span>
                     </div>
 
@@ -60,8 +60,8 @@
                     </div>
 
                     <div class="envio">
-                        <span style="font-size: 1em; color: #888888">
-                        <i class="far fa-truck"></i>
+                        <span style="font-size: 1.5em; color: #888888">
+                            <span class="mdi mdi-truck-check-outline"></span>
                         </span>
                         <p class="px-2 m-0">Envio gratis</p>
                     </div>
@@ -88,15 +88,15 @@
 
                     <div class="garantia">
                         <p class="mb-2">
-                        <span style="font-size: 1em; color: #888888">
-                            <i class="fas fa-shield-check"></i>
+                        <span style="font-size: 1.5em; color: #888888">
+                            <span class="mdi mdi-shield-check"></span>
                         </span>
                         Compra protegida
                         </p>
 
                         <p class="mb-2">
-                        <span style="font-size: 1em; color: #888888">
-                            <i class="fad fa-medal"></i>
+                        <span style="font-size: 1.5em; color: #888888">
+                            <span class="mdi mdi-medal"></span>
                         </span>
                         Garantia de 12 meses
                         </p>
@@ -315,13 +315,13 @@
             display: flex;
             flex-direction: column;
             max-width: 100%;
-            margin-top:10px;
+            margin-top: 10px;
             margin-left: 10px;
-
-            font-family: 'Abel', normal;
-            font-size: 14px;
+            font-family: "Abel", normal;
+            font-size: 16px;
             line-height: 1.125em;
             color: #8888;
+            align-items: flex-start;
         }
 
         .detalle-premio .stock{
