@@ -1,189 +1,129 @@
 <template>
-  <footer class="footer">
-    <section class="footer__div-logo">
-      <img
-        class="footer__div-logo-img"
-        src="@/assets/Logo_MuevetexPuntos_2.png"
-        alt=""
-      />
+  <div class="mx-0 Footer px-2">
+    <section class="footer__div-logo pt-3">
+      <img class="footer__div-logo-img" src="@/assets/Logo_MuevetexPuntos_2.png" alt="" />
     </section>
-    <section class="footer__navbar">
-      <div class="footer__nabvar-links-pages">
-        <nav class="list_nav_footer">
-          <p><strong>Nuestras páginas</strong></p>
-          <ul>
-            <li>Inicio</li>
-            <li>Eventos</li>
-            <li>Mis puntos</li>
-            <li>Premios</li>
-            <li>Contactanos</li>
+    <footer class="pt-5">
+      <div class="row w-100">
+        <div class="col-2">
+          <h5>Section</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">Home</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">Features</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">Pricing</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">FAQs</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">About</a>
+            </li>
           </ul>
-        </nav>
-      </div>
-      <div class="footer__nabvar-links-services">
-        <nav class="list_nav_footer">
-          <p><strong>El programa</strong></p>
-          <ul>
-            <li>Punto acumulados</li>
-            <li>Redimir puntos</li>
-            <li>Catalogos de premios</li>
-            <li>Terminos y condiciones</li>
+        </div>
+
+        <div class="col-2">
+          <h5>Section</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">Home</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">Features</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">Pricing</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">FAQs</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">About</a>
+            </li>
           </ul>
-        </nav>
-      </div>
-      <div class="footer__boletin">
-        <p><strong>Boletin de eventos</strong></p>
-        <form class="form" action="">
-          <label for=""></label>
-          <input
-            type="text"
-            placeholder="Correo electronico"
-            id="input_footer_email"
-          />
-          <input type="button" id="btnSuscribete" value="Suscribase" />
-        </form>
-      </div>
-      <div class="footer__social-links">
-        <div class="footer__social-links-contacto">
-          <p>(406) 555-0120</p>
-          <p style="color: #43bdd4">tim.jennings@example.com</p>
-          <p>775 Rolling Green Rd.</p>
-          <p>Biffco Enterprises Ltd.</p>
         </div>
-        <div class="footer__social-links-networks">
-          <a href="https://www.linkedin.com/"
-            ><p class="mdi mdi-linkedin"></p
-          ></a>
-          <a href="https://www.instagram.com/"
-            ><p class="mdi mdi-instagram"></p
-          ></a>
-          <a href="https://es-la.facebook.com/"
-            ><p class="mdi mdi-facebook"></p
-          ></a>
-          <a href="https://twitter.com/"><p class="mdi mdi-twitter"></p></a>
+
+        <div class="col-2">
+          <h5>Section</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">Home</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">Features</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">Pricing</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">FAQs</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">About</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-4 offset-1">
+          <form>
+            <h5>Subscribe to our newsletter</h5>
+            <p>Monthly digest of whats new and exciting from us.</p>
+            <div class="d-flex w-100 gap-2">
+              <label for="newsletter1" class="visually-hidden">Email address</label>
+              <input
+                id="newsletter1"
+                type="text"
+                class="form-control"
+                placeholder="Email address"
+              />
+              <button class="btn btn-primary" type="button">Subscribe</button>
+            </div>
+          </form>
         </div>
       </div>
-    </section>
-  </footer>
+
+      <div class="d-flex justify-content-between py-4 mt-4 border-top">
+        <p>© 2021 Company, Inc. All rights reserved.</p>
+        <ul class="list-unstyled d-flex">
+          <li class="ms-3">
+            <a class="link-light" href="#">
+              <span class="mdi mdi-twitter fs-2"></span>
+            </a>
+          </li>
+          <li class="ms-3">
+            <a class="link-light" href="#"
+              ><span class="mdi mdi-facebook fs-2"></span>
+            </a>
+          </li>
+          <li class="ms-3">
+            <a class="link-lightk" href="#"
+              ><span class="mdi mdi-instagram fs-2"></span
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </div>
 </template>
 <script>
 export default {};
 </script>
 
 <style scoped lang="scss">
-.footer {
+.Footer {
   background: $color-footer;
-  font-size: 18px;
-  .footer__div-logo {
+  color: white;
+  &.Footer__div-logo {
     display: flex;
     justify-content: left;
-    .footer__div-logo-img {
+    &.Footer__div-logo-img {
       width: 200px;
       margin: 20px;
     }
-  }
-
-  .footer__navbar {
-    display: grid;
-    width: 100%;
-    grid-template-columns: 1fr 1fr 0.7fr 0.7fr;
-    color: $color-text-footer;
-    padding: 0px 20px;
-
-    .footer__nabvar-links-pages {
-      p {
-        text-align: left;
-      }
-      ul {
-        padding: 0;
-      }
-    }
-
-    .footer__boletin {
-      justify-content: left;
-      padding: 0px 30px;
-      p {
-        text-align: left;
-      }
-    }
-
-    .footer__nabvar-links-services {
-      p {
-        text-align: left;
-      }
-      ul {
-        padding: 0;
-      }
-    }
-
-    .footer__social-links {
-      .footer__social-links-contacto {
-        font-size: 20px;
-        border-radius: 120px 0px;
-        background: $color-footer-section-contacto;
-        padding-right: 3rem;
-        padding-block: 2rem;
-
-        p {
-          text-align: right;
-          margin: 0;
-        }
-      }
-      .footer__social-links-networks {
-        margin: 0 45px;
-        padding: 10px 5px;
-        display: flex;
-        justify-content: center;
-
-        a {
-          font-size: 2rem;
-          margin: 0 10px;
-        }
-        p {
-          color: $color-text-footer;
-          text-align: center;
-          padding: 0;
-        }
-      }
-    }
-  }
-
-  li {
-    list-style-type: none;
-    text-align: left;
-    color: #e4e4e4aa;
-  }
-
-  li:hover {
-    color: white;
-  }
-
-  #input_footer_email {
-    background: $color-footer;
-    border: 0.5px solid #e4e4e4aa;
-    outline: none;
-    padding: 5px;
-    align-content: left;
-    color: white;
-  }
-
-  form {
-    display: grid;
-    grid-template-columns: 0.8fr;
-    grid-gap: 10px;
-  }
-
-  #btnSuscribete {
-    background: #43bdd4;
-    color: rgb(214, 213, 213);
-    border: none;
-    border-radius: 10px;
-    padding: 8px;
-  }
-
-  #btnSuscribete:hover {
-    background: #0d6677;
-    color: #e4e4e481;
   }
 }
 </style>

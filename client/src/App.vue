@@ -2,7 +2,6 @@
   <div id="app">
     <ModalLogin
       :showModal="isOpenModalLogin"
-      
       @closeLogin="closeModalLogin"
       @openRegister="toggleToRegister"
     ></ModalLogin>
@@ -10,10 +9,7 @@
       :showModal="isOpenModalRegister"
       @closeRegister="closeModalRegister"
     ></ModalRegister>
-    <Header
-    @showLogin = "showModalLogin"
-    @showRegister = "showModalRegister"
-    ></Header>
+    <Header @showLogin="showModalLogin" @showRegister="showModalRegister"></Header>
     <router-view />
     <Footer></Footer>
   </div>
@@ -31,7 +27,7 @@ export default {
       isOpenModalRegister: false,
     };
   },
-    methods: {
+  methods: {
     toggleToRegister() {
       this.isOpenModalLogin = false;
       this.isOpenModalRegister = true;
@@ -43,13 +39,13 @@ export default {
     closeModalLogin() {
       this.isOpenModalLogin = false;
     },
-    showModalRegister(){
+    showModalRegister() {
       this.isOpenModalLogin = false;
       this.isOpenModalRegister = true;
     },
-    closeModalRegister(){
+    closeModalRegister() {
       this.isOpenModalRegister = false;
-    }
+    },
   },
 
   components: { Header, Footer, ModalLogin, ModalRegister },

@@ -59,11 +59,13 @@ export default {
   methods: {
     consultarDatos() {
       this.consultarDatos = true;
+      console.log(process.env.VUE_APP_ROOT_API + "/premios");
       fetch(process.env.VUE_APP_ROOT_API + "/premios")
         .then((response) => response.json())
         .then((data) => {
           this.dataVacia = false;
-          this.dataPremios = data.premios;
+          this.dataPremios = data;
+          console.log(this.dataPremios);
         })
         .catch((error) => {
           this.dataVacia = true;
@@ -84,11 +86,7 @@ export default {
 <style lang="scss" scoped>
 @import url("https://fonts.googleapis.com/css2?family=ABeeZee&display=swap");
 .Premios {
-  background-image: linear-gradient(
-    10deg,
-    transparent 80%,
-    $color-salmon 80.1%
-  );
+  background-image: linear-gradient(10deg, transparent 80%, $color-salmon 80.1%);
 }
 .Premios__encabezado {
   display: flex;
@@ -131,29 +129,28 @@ export default {
 }
 .Premios__enlace-a-eventos {
   font-size: 24px;
-  
 }
 .Titulo_enlace-eventos {
   height: 100%;
   z-index: 10;
   background-image: linear-gradient(10deg, transparent 35%, rgb(54, 69, 89));
-position: relative;
+  position: relative;
   & h1 {
     width: 50%;
     position: absolute;
     right: 0;
   }
 
-      a {
-      text-decoration: none;
+  a {
+    text-decoration: none;
+    color: white;
+    &.router-link-exact-active {
       color: white;
-      &.router-link-exact-active {
-        color: white;
-      }
-      &.disable {
-        color: rgb(248, 248, 248);
-        font-weight: normal;
-      }
-      }
+    }
+    &.disable {
+      color: rgb(248, 248, 248);
+      font-weight: normal;
+    }
+  }
 }
 </style>

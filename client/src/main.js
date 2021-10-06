@@ -9,6 +9,8 @@ import "bootstrap/dist/css/bootstrap.css";
 //Importando la libreria mdi
 import "@mdi/font/css/materialdesignicons.min.css";
 
+
+
 // Libreria para las alertas
 import VueSweetalert2 from 'vue-sweetalert2';
 

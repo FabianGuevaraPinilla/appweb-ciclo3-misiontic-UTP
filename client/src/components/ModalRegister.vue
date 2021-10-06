@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div v-show="showModal" class="modal-mask">
+    <div v-show="showModal" class="modal-mask" @click="$emit('closeRegister')">
       <div class="modal-wrapper">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -12,18 +12,10 @@
             <div class="modal-body">
               <form class="row g-3">
                 <div class="col-md-6">
-                  <input
-                    type="email"
-                    class="form-control"
-                    placeholder="Nombre"
-                  />
+                  <input type="email" class="form-control" placeholder="Nombre" />
                 </div>
                 <div class="col-md-6">
-                  <input
-                    type="password"
-                    class="form-control"
-                    placeholder="Apellido"
-                  />
+                  <input type="password" class="form-control" placeholder="Apellido" />
                 </div>
                 <div class="col-12">
                   <input

@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div v-show="showModal" class="modal-mask">
+    <div v-show="showModal" class="modal-mask" @click="$emit('closeLogin')">
       <div class="modal-wrapper">
         <div class="modal-dialog" style="margin: 0">
           <div
@@ -23,58 +23,62 @@
                   <strong style="align-self: center">Mi Cuenta</strong>
                 </h2>
                 <p></p>
-                <h6
-                  class="text-start"
-                >
-                  Ingresa con usuario y contraseña
-                </h6>
+                <h6 class="text-start">Ingresa con usuario y contraseña</h6>
                 <form>
-                    <div class="mb-3">
-                      <input class="form-control" type="text" placeholder="Ingresa tu nombre de usuario" syle="font-family: 'Abel', sans-serif">
-                    </div>
-                    <div class="mb-3">
-                      <input class= "form-control" type="text" placeholder="Ingresa tu contraseña" syle="font-family: 'Abel', sans-serif">
-                    </div>
+                  <div class="mb-3">
+                    <input
+                      class="form-control"
+                      type="text"
+                      placeholder="Ingresa tu nombre de usuario"
+                      syle="font-family: 'Abel', sans-serif"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <input
+                      class="form-control"
+                      type="text"
+                      placeholder="Ingresa tu contraseña"
+                      syle="font-family: 'Abel', sans-serif"
+                    />
+                  </div>
                 </form>
                 <p></p>
-                <h6
-                class="text-start"
-                >
-                <router-link to="" class="routerlink">Olvidaste tu contraseña</router-link>
+                <h6 class="text-start">
+                  <router-link to="" class="routerlink"
+                    >Olvidaste tu contraseña</router-link
+                  >
                 </h6>
                 <p></p>
                 <div class="d-grid gap-2">
-                  <button 
-                  class="btn btn-primary" 
-                  type="button"
+                  <button class="btn btn-primary" type="button">Entrar</button>
+                  <button
+                    class="btn btn-secondary"
+                    type="button"
+                    data-bs-dismiss="modal"
+                    @click="$emit('closeLogin')"
                   >
-                  Entrar
+                    <i class="mdi mdi-arrow-left"></i>
+                    Volver
                   </button>
-                  <button 
-                  class="btn btn-secondary" 
-                  type="button"
-                  data-bs-dismiss="modal"
-                  @click="$emit('closeLogin')"
-                  >
-                  <i class="mdi mdi-arrow-left"></i>
-                  Volver
-                  </button>
-                <p></p>
-                <h6
-                class="text-start"
-                >
-                <a class="routerlink" @click="$emit('openRegister')">¿No tienes una cuenta? Creala ahora</a>
-                </h6>
-                <p></p>
-                <p></p>
-                <div class="text-center">
-                  <img class="footer__div-logo-img" src="@/assets/Logo_MuevetexPuntos.png" alt="" />
-                </div>
+                  <p></p>
+                  <h6 class="text-start">
+                    <a class="routerlink" @click="$emit('openRegister')"
+                      >¿No tienes una cuenta? Creala ahora</a
+                    >
+                  </h6>
+                  <p></p>
+                  <p></p>
+                  <div class="text-center">
+                    <img
+                      class="footer__div-logo-img"
+                      src="@/assets/Logo_MuevetexPuntos.png"
+                      alt=""
+                    />
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="modal-footer">
-            </div>
+            <div class="modal-footer"></div>
           </div>
         </div>
       </div>
@@ -86,16 +90,15 @@
 export default {
   props: ["showModal"],
   data() {
-    return{
-    };
+    return {};
   },
+  methods: {},
 };
 </script>
 
 <style lang="scss" scoped>
-
 @import url("https://fonts.googleapis.com/css2?family=Allerta&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
 
 .modal-mask {
   position: fixed;
@@ -132,7 +135,7 @@ export default {
   font-weight: normal;
   font-size: 18px;
   line-height: 18px;
-  background: #FF5A60;
+  background: #ff5a60;
   border-radius: 20px;
   border: none;
 }
@@ -143,15 +146,15 @@ export default {
   font-weight: normal;
   font-size: 18px;
   line-height: 18px;
-  color: #43BDD4;
-  background: #FFFFFF;
-  border: 1px solid #43BDD4;
+  color: #43bdd4;
+  background: #ffffff;
+  border: 1px solid #43bdd4;
   box-sizing: border-box;
   border-radius: 20px;
 }
 
 .bi-arrow-left-short {
-  color: #43BDD4;
+  color: #43bdd4;
 }
 
 .routerlink {
@@ -163,7 +166,7 @@ export default {
   color: #000000;
 }
 
-.text-start{
+.text-start {
   font-family: Abel;
   font-style: normal;
   font-weight: normal;
@@ -175,5 +178,4 @@ export default {
   width: 200px;
   margin: 20px;
 }
-
 </style>
