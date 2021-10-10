@@ -42,7 +42,7 @@
         </router-link>
       </div>
 
-      <img src="@/assets/Banner1.png" alt="" />
+      <img src="@/assets/images/Premio/Banner1.png" alt="" />
     </div>
   </div>
 </template>

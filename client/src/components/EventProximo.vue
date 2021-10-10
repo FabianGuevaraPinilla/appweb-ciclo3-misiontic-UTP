@@ -129,7 +129,7 @@
     top: 0em;
     bottom: 0em;
 
-    background: linear-gradient(0deg, rgba(47, 47, 47, 0.26), rgba(47, 47, 47, 0.26)), url("../assets/eventoMusicaClasica.jpg");
+    background: linear-gradient(0deg, rgba(47, 47, 47, 0.26), rgba(47, 47, 47, 0.26)), url("../assets/images/Home_img/eventoMusicaClasica.jpg");
     border-radius: 0px 10px 10px 0px;
 }
 
@@ -223,7 +223,7 @@
     right: 5%;
     top: 10%;
     bottom: 5%;
-    background: linear-gradient(0deg, rgba(47, 47, 47, 0.26), rgba(47, 47, 47, 0.26)), url("../assets/papel.jpg");
+    background: linear-gradient(0deg, rgba(47, 47, 47, 0.26), rgba(47, 47, 47, 0.26)), url("../assets/images/Home_img/papel.jpg");
     background-size: cover;
     background-position: center;
     border-radius: 0px 10px 10px 0px;
@@ -304,7 +304,7 @@ button:hover{
     right: 5%;
     top: 10%;
     bottom: 5%;
-    background: linear-gradient(0deg, rgba(47, 47, 47, 0.26), rgba(47, 47, 47, 0.26)), url("../assets/foro.png");
+    background: linear-gradient(0deg, rgba(47, 47, 47, 0.26), rgba(47, 47, 47, 0.26)), url("../assets/images/Home_img/foro.png");
     background-size: cover;
     background-position: center;
     border-radius: 0px 10px 10px 0px;
@@ -359,7 +359,7 @@ button:hover{
     right: 5%;
     top: 5%;
     bottom: 5%;
-    background: linear-gradient(0deg, rgba(47, 47, 47, 0.26), rgba(47, 47, 47, 0.26)), url("../assets/acordeon.png");
+    background: linear-gradient(0deg, rgba(47, 47, 47, 0.26), rgba(47, 47, 47, 0.26)), url("../assets/images/Home_img/acordeon.png");
     background-size: cover;
     background-position: center;
     border-radius: 0px 10px 10px 0px;
@@ -414,7 +414,7 @@ button:hover{
     right: 5%;
     top: 5%;
     bottom: 5%;
-    background: linear-gradient(0deg, rgba(47, 47, 47, 0.26), rgba(47, 47, 47, 0.26)), url("../assets/aerobic.png");
+    background: linear-gradient(0deg, rgba(47, 47, 47, 0.26), rgba(47, 47, 47, 0.26)), url("../assets/images/Home_img/aerobic.png");
     background-size: cover;
     background-position: center;
     border-radius: 0px 10px 10px 0px;

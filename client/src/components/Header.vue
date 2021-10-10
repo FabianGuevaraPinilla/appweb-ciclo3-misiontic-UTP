@@ -5,7 +5,7 @@
         <router-link to="/">
           <img
             class="header__navbar-brand-image"
-            src="@/assets/Logo_app.png"
+            src="@/assets/logo.png"
             alt=""
           />
         </router-link>
@@ -23,7 +23,7 @@
               <router-link to="/premios">Premios</router-link>
             </li>
             <li>
-              <router-link to="/contactenos">Contactenos</router-link>
+              <router-link to="/about">Contactenos</router-link>
             </li>
           </ul>
         </nav>

@@ -7,15 +7,15 @@
   >
     <div class="carousel-inner">
       <div class="carousel-item" :class="posSlider === 1 ? 'active' : ''">
-        <img src="../assets/Slider2.png" class="d-block w-100" alt="..." />
+        <img src="../assets/images/Home_img/Slider2.png" class="d-block w-100" alt="..." />
       </div>
 
       <div class="carousel-item" :class="posSlider === 2 ? 'active' : ''">
-        <img src="../assets/Slider.png" class="d-block w-100" alt="..." />
+        <img src="../assets/images/Home_img/Slider.png" class="d-block w-100" alt="..." />
       </div>
 
       <div class="carousel-item" :class="posSlider === 3 ? 'active' : ''">
-        <img src="../assets/Slider3.png" class="d-block w-100" alt="..." />
+        <img src="../assets/images/Home_img/Slider3.png" class="d-block w-100" alt="..." />
       </div>
     </div>
 
@@ -58,3 +58,9 @@ export default {
   },
 };
 </script>
+
+<style scoped lang="scss" >
+  .carousel-item{
+    height: 600px;
+  }
+</style>

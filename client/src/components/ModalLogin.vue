@@ -71,7 +71,7 @@
                   <div class="text-center">
                     <img
                       class="footer__div-logo-img"
-                      src="@/assets/Logo_MuevetexPuntos.png"
+                      src="@/assets/logo.png"
                       alt=""
                     />
                   </div>

@@ -3,7 +3,7 @@
     <div class="wrapper">
       <div class="clash-card barbarian">
         <div class="clash-card__image clash-card__image--barbarian">
-          <img :src="require('@/assets/' + imagen)" alt="barbarian" />
+          <img :src="require('@/assets/images/Home_img/' + imagen)" alt="barbarian" />
         </div>
         <div class="clash-card__unit-name">{{ nombre }}</div>
         <div class="clash-card__unit-description">
@@ -90,7 +90,7 @@ $border-radius-size: 14px;
   border-top-right-radius: $border-radius-size;
 }
 .clash-card__image--barbarian {
-  background: url(../assets/Rec.png);
+  background: url(../assets/images/Home_img/Rec.png);
   background-size: cover;
   img {
     position: absolute;
@@ -115,7 +115,7 @@ $border-radius-size: 14px;
   font-family: "Assistant", sans-serif;
 }
 .clash-card__unit-stats--barbarian {
-  background: url(../assets/Rec.png);
+  background: url(../assets/images/Home_img/Rec.png);
   height: 10%;
   background-size: cover;
   position: relative;

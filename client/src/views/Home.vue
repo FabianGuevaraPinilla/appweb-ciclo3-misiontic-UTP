@@ -10,28 +10,28 @@
 
       <div class="container">
         <div class="card">
-          <img src="../assets/login.png" alt="Avatar" />
+          <img src="../assets/images/Home_img/login.png" alt="Avatar" />
           <div class="d-flex" style="align-items: baseline">
             <p><strong>Registrate</strong> o inicia sesion</p>
           </div>
         </div>
 
         <div class="card">
-          <img src="../assets/metodo-de-pago.png" alt="Avatar" />
+          <img src="../assets/images/Home_img/metodo-de-pago.png" alt="Avatar" />
           <div class="d-flex" style="align-items: baseline">
             <p><strong>Obten</strong> puntos</p>
           </div>
         </div>
 
         <div class="card">
-          <img src="../assets/carrito-de-compras.png" alt="Avatar" />
+          <img src="../assets/images/Home_img/carrito-de-compras.png" alt="Avatar" />
           <div class="d-flex" style="align-items: baseline">
             <p><strong>Redimelos </strong>en premios</p>
           </div>
         </div>
 
         <div class="card">
-          <img src="../assets/papel-picado.png" alt="Avatar" />
+          <img src="../assets/images/Home_img/papel-picado.png" alt="Avatar" />
           <div class="d-flex" style="align-items: baseline">
             <p><strong>Disfruta</strong> de los premios</p>
           </div>
@@ -173,7 +173,7 @@ export default {
 }
 
 .banner {
-  background-image: url("../assets/Banner1.png");
+  background-image: url("../assets/images/Home_img/Banner1.png");
   display: inline-block;
   margin-left: 10px;
   margin-right: 10px;

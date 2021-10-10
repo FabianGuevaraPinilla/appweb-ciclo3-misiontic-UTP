@@ -15,18 +15,18 @@
     <div class="Eventos__seccion-proximos">
       <img
         class="Eventos__itemevento-proximo c1 img-fluid"
-        src="@/assets/Component1Eventos.png"
+        src="@/assets/images/Eventos/Component1Eventos.png"
         alt=""
       />
       <img
         class="Eventos__itemevento-proximo c2 img-fluid"
-        src="@/assets/Component2Eventos.png"
+        src="@/assets/images/Eventos/Component2Eventos.png"
         alt=""
       />
     </div>
     <div class="Eventos__seccion-premios">
       <h1>Redime los puntos por premios</h1>
-      <img class="img-fluid" src="@/assets/Component3Eventos.png" alt="" />
+      <img class="img-fluid" src="@/assets/images/Eventos/Component3Eventos.png" alt="" />
       <button class="Eventos__seccionpremios-btn" @click="$router.push('/premios')">
         <p>Ver catálogo completo</p>
       </button>
