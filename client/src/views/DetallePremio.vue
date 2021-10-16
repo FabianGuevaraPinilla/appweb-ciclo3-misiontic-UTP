@@ -28,11 +28,11 @@
 
         <div class="caracteristica-product">
           <div class="title">
-            <h2>Caracteristica del producto</h2>
+            <h2>Características del producto</h2>
           </div>
           <div class="body-caracteristicas">
             <ul>
-              <li>
+              <li class="fs-3">
                 <strong> Categoria: </strong>
                 {{ dataPremios ? dataPremios.categoria : "" }}
               </li>

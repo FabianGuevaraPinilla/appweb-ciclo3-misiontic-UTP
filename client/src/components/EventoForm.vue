@@ -153,7 +153,6 @@
           id="selectVisibilidad"
           class="form-select form-control"
           v-model="dataEventSelected.disponible"
-
         >
           <option :value="true">Visible</option>
           <option :value="false">Oculto</option>

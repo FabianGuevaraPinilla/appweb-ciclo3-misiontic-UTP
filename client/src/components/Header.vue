@@ -114,6 +114,7 @@ export default {
 };
 </script>
 
+
 <style lang="scss" scoped>
 $breackpoint: 576px;
 .btn_collapse{

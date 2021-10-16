@@ -24,7 +24,7 @@
           <h1>{{ dataEvento.valor_puntos }}</h1>
           <p id="text-puntos">Puntos</p>
         </div>
-        <div class="itemevento-fecha">
+        <div class="itemevento-fecha ">
           {{ fecha }} <br />
           {{ hora }}
         </div>
@@ -164,11 +164,11 @@ button {
       color: white;
       position: absolute;
       background: $color-footer-section-contacto;
-      width: 40%;
+      //width: 40%;
       top: 0;
       right: 0;
       margin: 0;
-      font-size: 18px;
+      font-size: 14px;
       height: 28px;
     }
   }
@@ -203,11 +203,12 @@ button {
       }
     }
     .itemevento-fecha {
-      background: white;
+      background: $color-gray;
       display: flex;
       flex-direction: row;
       justify-content: center;
-      font-size: 24px;
+      align-items: center;
+      font-size:18px;
     }
   }
 }
