@@ -81,12 +81,13 @@ export default {
 }
 .Eventos__lista {
   display: grid;
-  
+  grid-gap: 2rem;
+  padding-inline: 2rem;
   @media (max-width: 456px) {
     grid-template-columns: 1fr;
+    grid-template-rows: auto;
     margin-inline: 20px;
     padding: 10px;
-    grid-gap: 50px;
   }
     @media (min-width: 768px) {
     grid-template-columns: 1fr 1fr;
