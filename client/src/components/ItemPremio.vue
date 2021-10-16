@@ -1,39 +1,46 @@
 <template>
-  <router-link v-if="dataPremio.visible" :to="'/premios/detalle/' + dataPremio._id">
-    <div class="ItemPremio card" v-on:click="showAlert()">
+  <router-link class="text-decoration-none" v-if="dataPremio.visible" :to="'/premios/detalle/' + dataPremio._id">
+
+    <div v-show="urlServer === '' ? true : false" class="spinnerLoader">
+        <pulse-loader
+          :color="colorLoading"
+        ></pulse-loader>
+    </div>
+
+    <div class="ItemPremio card" v-on:click="showAlert()" 
+    v-show="urlServer != '' ? true : false">
+
       <div class="ItemPremio_img position-relative">
-        <!-- Si el componente se encuentra agotado -->
-        <h1
-          class="fw-bold position-absolute top-0 start-0 fs-4 w-50 py-2 ItemPremio_tituloPromo"
-          v-if="dataPremio.disponible"
-        >
-          AGOTADO
-        </h1>
-        <!-- IMagen del premio -->
-        <img class="img-fluid" :src="urlServer" alt="" />
+          <img class="img-fluid" :src="urlServer" alt="" />
       </div>
       <div class="ItemPremio_puntos card-body">
         <p class="fs-6 mb-0">PUNTOS</p>
         <!-- valor de puntos -->
         <h1 class="fs-1">{{ dataPremio.valor_puntos }}</h1>
       </div>
+
     </div>
+
   </router-link>
 </template>
 <script>
 import axios from "axios";
+import PulseLoader from "vue-spinner/src/PulseLoader.vue";
+import GridLoader from "vue-spinner/src/GridLoader.vue";
 export default {
   props: ["dataPremio"],
   data() {
     return {
       urlServer: "",
+      colorLoading: "#242f3d",
     };
   },
+  components: { PulseLoader, GridLoader },
   mounted() {
-    this.urlServer = process.env.VUE_APP_ROOT;
+    let urlServer = process.env.VUE_APP_ROOT;
 
     axios
-      .get(this.urlServer + this.dataPremio.path_foto, { responseType: "arraybuffer" })
+      .get(urlServer + this.dataPremio.path_foto, { responseType: "arraybuffer" })
       .then((response) => {
         const base64 = btoa(
           new Uint8Array(response.data).reduce(
@@ -45,7 +52,7 @@ export default {
       })
       .catch((e) => {
         axios
-          .get(this.urlServer + "/static/images/cross.jpg", {
+          .get(urlServer + "/static/images/cross.jpg", {
             responseType: "arraybuffer",
           })
           .then((response) => {
@@ -68,6 +75,19 @@ export default {
 };
 </script>
 <style scoped lang="scss">
+
+.spinnerLoader{
+
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    width: 100%;
+
+}
+
 .ItemPremio {
   text-decoration: none;
   font-family: "Assistant", sans-serif;

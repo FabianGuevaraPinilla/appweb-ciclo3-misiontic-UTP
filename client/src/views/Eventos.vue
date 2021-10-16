@@ -75,12 +75,30 @@ export default {
   font-size: 36px;
   padding-top: 85px;
   margin-bottom: 50px;
+    @media (max-width: 456px) {
+    font-size: 24px;
+  }
 }
 .Eventos__lista {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  padding-inline: 2rem;
+  @media (max-width: 456px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    margin-inline: 20px;
+    padding: 10px;
+  }
+    @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+    margin-inline: 20px;
+    grid-gap: 30px;
+  }
+  @media (min-width: 992px) {
+    grid-template-columns: repeat(3, 1fr);
   margin: 0 100px 50px 100px;
   grid-gap: 50px;
+  }
 }
 .Eventos__titulo-proximos {
   font-family: "Assistant", sans-serif;

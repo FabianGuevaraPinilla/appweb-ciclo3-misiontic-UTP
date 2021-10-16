@@ -5,7 +5,6 @@
       </div>
       <p></p>
       <form class="row g-3" @submit.prevent="onPress">
-  
         <div class="row mb-3">
           <label for="titulo" class="col-sm-2 col-form-label">Título del Evento</label>
           <div class="col-sm-9">
@@ -35,7 +34,7 @@
         <div class="row mb-3">
           <label for="selectcat" class="col-form-label col-sm-2 pt-0">Categoria del Evento</label>
           <div class="col-sm-9">
-            <select id="selectcat" name="selectCategoria" class="custom-select form-control col-sm-9" v-model="dataEventSelected.id_categoria" required>
+            <select id="selectcat" name="selectCategoria" class="form-select form-control col-sm-9" v-model="dataEventSelected.id_categoria" required>
               <option
                 v-for="(categoria, idx) in categorias"
                 :key="idx"
@@ -49,7 +48,7 @@
         <div class="row mb-3">
           <label for="selecttipo" class="col-form-label col-sm-2 pt-0">Tipo del Evento</label>
           <div class="col-sm-9">
-            <select id="selecttipo" name="selectTipo" class="custom-select form-control col-sm-9" v-model.number="dataEventSelected.id_tipo" required>
+            <select id="selecttipo" name="selectTipo" class="form-select form-control col-sm-9" v-model.number="dataEventSelected.id_tipo" required>
               <option v-for="(tipo, idx) in tipos" :key="idx" :value="tipo._id">
                 {{ tipo.tipoEvento }}
               </option>
@@ -145,12 +144,23 @@
           </div>
         </div>
         <p></p>
-        <div class="col-md-4 offset-sm-4 text-center">
-          <select name="selectDisponible" v-model="dataEventSelected.disponible">
-            <option :value="true">Disponible</option>
-            <option :value="false">No disponible</option>
-          </select>
+      <div class="row mt-3 mb-3">
+        <label for="selectVisibilidad" class="col-form-label col-sm-2 "
+          >Disponibilidad en el catálogo</label
+        >
+        <div class="col-sm-9 col-md-3">
+        <select
+          id="selectVisibilidad"
+          class="form-select form-control"
+          v-model="dataEventSelected.disponible"
+        >
+          <option :value="true">Visible</option>
+          <option :value="false">Oculto</option>
+        </select>
         </div>
+        <div class="col-md-3"></div>
+      </div>
+
         <div class="col-md-4 offset-sm-4 text-center">
           <button type="submit" class="btn btn-outline-success w-50 m-3">Actualizar</button>
         </div>
@@ -160,7 +170,9 @@
 </template>
 
 <script>
+
 import axios from "axios";
+
 export default {
   props: ["categorias", "tipos", "sucursales", "idEvento", "dataEvento"],
   data() {

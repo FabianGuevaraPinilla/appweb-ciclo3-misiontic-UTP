@@ -3,7 +3,7 @@
     <div class="banner--about">
       <h1>
         Con puntos <br />
-        <strong>siempre puedes tener mas</strong>
+        <strong>siempre puedes tener más</strong>
       </h1>
     </div>
 
@@ -11,7 +11,7 @@
       <h1>¿QUE ES MUEVE POR PUNTOS?</h1>
       <p>
         Mueve por puntos es un ecosistema con variedad de eventos en los que acumulas en
-        una unica cuenta puntos por participacion, los mismos podran ser redimidos en
+        una única cuenta puntos por participación, los mismos podran ser redimidos en
         diversos premios.
       </p>
 
@@ -19,7 +19,7 @@
 
       <h1>¿COMO ACUMULAS PUNTOS EN MUEVE POR PUNTOS?</h1>
       <p>
-        Una ves se encuentre activo mediante una cuenta en Mueve por Puntos, estaras listo
+        Una ves se encuentre activo mediante una cuenta en Mueve por Puntos, estarás listo
         para comenzar a acumular puntos. Para ganarlos, debes inscribirte a algunos de
         nuestros eventos y listo.
       </p>
@@ -42,6 +42,24 @@
         </div>
       </div>
     </div>
+
+    <!-- TEAM -->
+    <div class="page-section bg-light" id="team">
+      <div class="container">
+        <div class="text-center py-5">
+          <h2 class="section-heading text-uppercase" id="text-team-header">Nuestro equipo</h2>
+          <h3 class="section-subheading text-muted" id="text-team">Conoce a las personas que con esfuerzo y dedicación llevaron a cabo este increible proyecto.</h3>
+        </div>
+        
+        <!-- <div class="row container-team">
+          <div class="col-lg-4" v-for="(item, index) of team" :key="index">
+            <TeamCard :miembro="item"></TeamCard>
+          </div>
+        </div> -->
+
+      </div>
+    </div>
+
 
     <div class="container-contactenos">
       <div class="row">
@@ -111,14 +129,78 @@
         </div>
       </div>
     </div>
+
   </div>
 </template>
+
+<script>
+import TeamCard from '../components/TeamCard.vue'
+
+export default {
+  name: "About",
+  components: {
+    TeamCard
+  },
+
+  data(){
+    return {
+      team: [
+        {
+          codigo: 1,
+          nombre: "Laura Motta",
+          rol: "Scrum Master",
+          imagen: "/images/team/user.png",
+          linkedin: "#"
+        },
+        {
+          codigo: 2,
+          nombre: "Javier Morales",
+          rol: "Product Owner",
+          imagen: "/images/team/user.png",
+          linkedin: "#"
+        },
+        {
+          codigo: 3,
+          nombre: "Fabian Guevara",
+          rol: "Desarrollador backend",
+          imagen: "/images/team/fabian.png",
+          linkedin: "#"
+        },
+        {
+          codigo: 4,
+          nombre: "Cristian Curiel",
+          rol: "Desarrollador frontend",
+          imagen: "/images/team/user.png",
+          linkedin: "#"
+        },
+      ],
+    };
+  },
+
+};
+</script>
+
 
 <style lang="scss" scoped>
 @import url("https://fonts.googleapis.com/css2?family=Allerta&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=ABeeZee&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@600&display=swap");
+#text-team-header{
+    font-family: "Allerta", normal;
+    font-size: 30px;
+    color: #ff5a60;
+}
+
+#text-team{
+  font-size: 24px;
+}
+
+.container-team{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
 
 .container-fluid {
   background: #f2f2f2;
@@ -248,16 +330,16 @@
 
     .row > .form-floating > input,
     textarea {
-      border-radius: 50px;
+      border-radius: 5px;
     }
 
     .row .col .form-floating > input {
-      border-radius: 50px;
+      border-radius: 5px;
     }
 
     button {
       width: 90%;
-      border-radius: 50px;
+      border-radius: 5px;
       color: #fff;
       border: none;
       background: #43bdd4;

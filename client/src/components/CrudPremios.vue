@@ -37,7 +37,7 @@
       @eliminarPremio="deletePremio(premioSelect)"
     ></PremioDetail>
     <div class="Seccion-tabla" v-show="!errorConsulta && showListadoPremios">
-      <h2>Tabla de premios</h2>
+      <h2>Tabla de Premios</h2>
       <div class="table-responsive">
         <table class="table table-sm">
           <thead>
@@ -259,7 +259,7 @@ export default {
                 this.closeForm();
               })
               .catch((e) => {
-                this.$swal("Premio no eliminado ha ocurrido un error");
+                this.$swal("Premio no eliminado, ha ocurrido un error");
               });
           } else if (
             /* Read more about handling dismissals below */

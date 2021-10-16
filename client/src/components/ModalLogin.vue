@@ -126,13 +126,13 @@ export default {
       this.$emit('closeLogin');
     },
     doLogin() {
-      //peticion
+     //peticion
       axios
         .post(process.env.VUE_APP_ROOT + "/login", this.dataForm, {
           headers: {
             "Content-Type": "application/json",
           },
-        })
+        }) 
         .then((res) => {
           this.dataForm = {
             username: "",
@@ -143,7 +143,12 @@ export default {
           this.errorMsg = undefined;
 
           this.$store.commit("setUser", res.data);
+
           localStorage.setItem("token", res.data.token);
+          localStorage.setItem("username", res.data.username);
+          localStorage.setItem("id", res.data.id_user)
+          localStorage.setItem("fecha", res.data.fecha_acceso)
+          localStorage.setItem("rol", res.data.rol)
           localStorage.setItem("auth", "OK");
           console.log("Datos guardados");
           console.log(this.$store.state.userdata.username);

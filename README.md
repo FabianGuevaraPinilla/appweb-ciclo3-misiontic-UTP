@@ -9,3 +9,7 @@ Repositorio de trabajo del Equipo 4 del Grupo 02
 
 ## Publicación deploy en Netlify
 https://muevetexpuntos.netlify.app/
+
+
+## Backend de la aplicación
+https://mueveteporpuntos.herokuapp.com/

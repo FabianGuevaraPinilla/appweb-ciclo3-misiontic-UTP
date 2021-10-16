@@ -1,23 +1,32 @@
 <template>
   <button v-if="dataEvento.disponible" @click="handleClick">
     <div class="Eventos__item">
-      <div class="Eventos__ItemEvento-img">
-        <!-- :src="
-            urlServer + dataEvento.path_foto || urlServer + '/static/images/cross.jpg'
-          " -->
+      <div class="imagen">
+        <!--
+            "urlServer != '' ? false : true"
+          -->
+        <div v-show="urlServer === '' ? true : false" class="spinnerLoader">
+          <pulse-loader :color="colorLoading"></pulse-loader>
+        </div>
 
-        <img :src="urlServer" alt="" />
-        <h2 class="fs-4">{{ dataEvento.tipo }}</h2>
+        <div
+          v-show="urlServer != '' ? true : false"
+          class="Eventos__ItemEvento-img"
+        >
+          <img :src="urlServer" alt="" />
+          <h2 class="fs-4">{{ dataEvento.tipo }}</h2>
+        </div>
       </div>
+
       <div class="Eventos__ItemEvento-text">
         <div class="itemevento-descripcion">{{ dataEvento.titulo }}</div>
         <div class="itemevento-puntos">
           <h1>{{ dataEvento.valor_puntos }}</h1>
           <p id="text-puntos">Puntos</p>
         </div>
-        <div class="itemevento-fecha">
-          {{ dataEvento.fecha_inicio }} <br />
-          {{ dataEvento.cupo }}
+        <div class="itemevento-fecha ">
+          {{ fecha }} <br />
+          {{ hora }}
         </div>
       </div>
     </div>
@@ -26,19 +35,32 @@
 
 <script>
 import axios from "axios";
+import PulseLoader from "vue-spinner/src/PulseLoader.vue";
+import GridLoader from "vue-spinner/src/GridLoader.vue";
+
 const path = require("path");
 export default {
   props: ["dataEvento", "simple"],
   data() {
     return {
       urlServer: "",
+      colorLoading: "#242f3d",
+      fecha: "",
+      hora: "",
     };
   },
+  components: { PulseLoader, GridLoader },
+
   mounted() {
-    this.urlServer = process.env.VUE_APP_ROOT;
+    this.hora = this.getHora();
+    this.fecha = this.getFecha();
+
+    let urlServer = process.env.VUE_APP_ROOT;
 
     axios
-      .get(this.urlServer + this.dataEvento.path_foto, { responseType: "arraybuffer" })
+      .get(urlServer + this.dataEvento.path_foto, {
+        responseType: "arraybuffer",
+      })
       .then((response) => {
         const base64 = btoa(
           new Uint8Array(response.data).reduce(
@@ -50,7 +72,7 @@ export default {
       })
       .catch((e) => {
         axios
-          .get(this.urlServer + "/static/images/cross.jpg", {
+          .get(urlServer + "/static/images/cross.jpg", {
             responseType: "arraybuffer",
           })
           .then((response) => {
@@ -72,6 +94,30 @@ export default {
   },
 
   methods: {
+    getFecha() {
+      let infoFecha = this.dataEvento.fecha_inicio.split("T");
+      let fecha = infoFecha[0];
+      var meses = [
+        "Enero",
+        "Febrero",
+        "Marzo",
+        "Abril",
+        "Mayo",
+        "Junio",
+        "Julio",
+        "Agosto",
+        "Septiembre",
+        "Octubre",
+        "Noviembre",
+        "Diciembre",
+      ];
+      return meses[parseInt(fecha.split("-")[1])] + " " + fecha.split("-")[2];
+    },
+    getHora() {
+      let infoFecha = this.dataEvento.fecha_inicio.split("T");
+      let hora = infoFecha[1];
+      return hora + " Horas";
+    },
     handleClick() {
       this.$router.push("/eventos/detalle/" + this.dataEvento._id);
       window.scrollTo(0, 0);
@@ -80,6 +126,17 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+.spinnerLoader {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  position: absolute;
+  width: 100%;
+}
+
 button {
   border: none;
   background: none;
@@ -92,6 +149,7 @@ button {
 }
 .Eventos__item {
   min-height: 300px;
+  min-width: 240px;
   font-family: "Assistant", sans-serif;
   display: flex;
   flex-direction: column;
@@ -106,10 +164,11 @@ button {
       color: white;
       position: absolute;
       background: $color-footer-section-contacto;
-      width: 40%;
+      //width: 40%;
       top: 0;
+      right: 0;
       margin: 0;
-      font-size: 18px;
+      font-size: 14px;
       height: 28px;
     }
   }
@@ -144,11 +203,12 @@ button {
       }
     }
     .itemevento-fecha {
-      background: white;
+      background: $color-gray;
       display: flex;
       flex-direction: row;
       justify-content: center;
-      font-size: 24px;
+      align-items: center;
+      font-size:18px;
     }
   }
 }

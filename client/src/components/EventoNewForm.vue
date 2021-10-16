@@ -142,11 +142,22 @@
         </div>
       </div>
       <p></p>
-      <div class="col-md-4 offset-sm-4 text-center">
-        <select name="selectDisponible" v-model="modelEvento.disponible">
-          <option :value="true">Disponible</option>
-          <option :value="false">No disponible</option>
+<div class="row mt-3 mb-3">
+        <label for="selectVisibilidad" class="col-form-label col-sm-2 "
+          >Disponibilidad en el catálogo</label
+        >
+        <div class="col-sm-9 col-md-3">
+        <select
+          id="selectVisibilidad"
+          class="form-select form-control"
+          v-model="modelEvento.disponible"
+
+        >
+          <option :value="true">Visible</option>
+          <option :value="false">Oculto</option>
         </select>
+        </div>
+
       </div>
       <div class="col-md-4 offset-sm-4 text-center">
         <button type="button" class="btn btn-outline-warning w-25  m-3" @click="clearForm">Limpiar</button>

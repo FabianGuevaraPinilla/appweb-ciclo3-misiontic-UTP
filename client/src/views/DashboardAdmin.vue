@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid">
     <div class="row">
-      <nav class="col-md-2 d-none d-md-block bg-light sidebar px-0">
+      <nav class="col-md-2 d-none d-md-block sidebar px-0 Dashboard_nav">
         <div class="sidebar-sticky">
           <ul class="nav flex-column">
             <li class="nav-item">
@@ -72,9 +72,13 @@ export default {
 </script>
 <style lang="scss" scoped>
 .nav-link {
+  color: white;
   &.active {
     color: #044182;
     background: white;
   }
+}
+.Dashboard_nav{
+  background-color: $color-footer-section-contacto;
 }
 </style>

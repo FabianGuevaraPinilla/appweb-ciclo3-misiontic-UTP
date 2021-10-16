@@ -37,6 +37,9 @@ const routes = [
   {
     path: '/admin',
     name: 'admin',
+    meta: {
+      requiresAuthAdmin: true
+    },
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
@@ -72,5 +75,15 @@ const router = new VueRouter({
   base: process.env.BASE_URL,
   routes
 })
-
+router.beforeEach((to, from, next) => {
+  if (to.matched.some(record => record.meta.requiresAuthAdmin)) {
+    if (localStorage.auth === "OK" && localStorage.getItem("rol")==="ADMIN") {
+      next();
+    } else {
+      next({ name: "Home" });
+    }
+  } else {
+    next();
+  }
+});
 export default router

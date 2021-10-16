@@ -48,8 +48,7 @@ eventoRoute.route("/").get((req, res) => {
                     path_foto: '$path_foto',
                     cantidad: '$cantidad',
                     valor_puntos: '$valor_puntos',
-                    created: '$created',
-                    updated: '$updated',
+                    fecha_inicio: '$fecha_inicio',
                     disponible: "$disponible"
                 }
             }
@@ -135,6 +134,7 @@ eventoRoute.route("/:id").get((req, res, next) => {
                     titulo: '$titulo',
                     detalle: '$descripcion',
                     lugar: '$lugar',
+                    url: '$url',
                     categoria: '$categoria.nombre',
                     sucursal: '$sucursal.nombre',
                     fecha_inicio: '$fecha_inicio',

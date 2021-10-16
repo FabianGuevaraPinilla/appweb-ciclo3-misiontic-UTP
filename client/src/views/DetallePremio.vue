@@ -28,11 +28,11 @@
 
         <div class="caracteristica-product">
           <div class="title">
-            <h2>Caracteristica del producto</h2>
+            <h2>Características del producto</h2>
           </div>
           <div class="body-caracteristicas">
             <ul>
-              <li>
+              <li class="fs-3">
                 <strong> Categoria: </strong>
                 {{ dataPremios ? dataPremios.categoria : "" }}
               </li>
@@ -125,6 +125,7 @@
       <div class="body-section2">
         <div class="imagenEvento">
           <img
+          class="img-fluid"
             src="../assets/images/Eventos/conciertoMusicaClasica.jpeg"
             alt="Clock"
             sizes="(min-width: 400px) 200px, 50vw"
