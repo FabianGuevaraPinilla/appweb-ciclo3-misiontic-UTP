@@ -6,10 +6,7 @@ Repositorio de trabajo del Equipo 4 del Grupo 02
 * Laura Natalia Motta Cadena
 * Fabian David Guevara Pinilla
 * Cristian Alberto Curiel Camargo
+* Javier Morales
 
-## Publicación deploy en Netlify
-https://muevetexpuntos.netlify.app/
-
-
-## Backend de la aplicación
+## Deploy aplicación
 https://mueveteporpuntos.herokuapp.com/
